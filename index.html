@@ -2,93 +2,395 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzateria</title>
     <style>
-        nav {
-            text-align: center;
+        header {
+            background-color: brown;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            color: antiquewhite;
+            padding-left: 5px;
         }
 
-        a {
+        nav {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            padding: 30px;
             text-decoration: none;
+            text-align: end;
         }
-        header{
-            background-color: lightseagreen;
+
+        .gridLay {
+            display: grid;
+            grid-template-columns: 20% 80%;
         }
-        footer{
-            background-color: lightseagreen;
+
+        .columsLay {
+            padding: 10px;
+            background-color: aqua;
+            border-right: 1px solid black;
+        }
+
+        .pizzas {
+            font-size: large;
+            list-style-type: none;
+            padding-left: 4px;
+        }
+
+        .sidesList:hover {
+            font-size: x-large;
+            padding-left: 2px;
+        }
+
+        .pizzaList:hover {
+            font-size: x-large;
+            padding-left: 2px;
+        }
+
+        .mainContent {
+            display: grid;
+            grid-template-rows: 65% 35%;
+        }
+
+        .welcomeContent,
+        .orderContent {
+            background-color: palegoldenrod;
+        }
+
+        .orderList {
+            padding: 10px;
+        }
+
+        .order1,
+        .order2,
+        .order3,
+        .order4 {
+            padding: 2px;
+            margin: 1px;
+        }
+
+        .pizzaTypes {
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: aqua;
+        }
+
+        .typeCurr {
+            display: flex;
+        }
+
+        .pizzaImg:hover {
+            width: 210px;
+            height: 210px;
+        }
+
+        footer {
+            background-color: blueviolet;
+            display: grid;
+            grid-template-columns: 20% 45% 35%;
+        }
+
+        .ourLocations {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0px;
         }
     </style>
 </head>
 
 <body>
+    <!-- Page header -->
     <header>
-        <h1 style="text-align: center;">E Products</h1>
+        <h1>
+            Pizza with Sourav
+        </h1>
         <nav>
-            <a href="">Home</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
-            <a href="">Products</a>
+            <a class="navBar" href="#">Home</a>
+            <a class="navBar" href="#">New Ideas</a>
+            <a class="navBar" href="#">About Us</a>
+            <a class="navBar" href="#">Contact Us</a>
         </nav>
     </header>
-
-    <main>
-        <hr>
-
-        <!-- section 1 -->
-        <section>
-            <details open>
-                <summary>Mobiles</summary>
-                <ul type="none">
-                    <li><a href="">Samsung</a></li>
-                    <li><a href="">MI</a></li>
-                    <li><a href="">Vivo</a></li>
-                    <li><a href="">Sony</a></li>
+    <!-- Main Page -->
+    <section class="gridLay">
+        <!-- left pannel -->
+        <div class="columsLay">
+            <section>
+                <h3>Explore your Favourite</h3>
+                <ul class="pizzas">
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/ChickenCheeze.jpeg"
+                            width="26px" height="26px">Chicago
+                        Pizza</li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/GreekPizza.jpeg"
+                            width="26px" height="26px">Greek
+                        Pizza </li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/DetroitPizza.jpeg"
+                            width="26px" height="26px">Detroit
+                        Pizza</li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/NewYorkPizza.jpeg"
+                            width="26px" height="26px">New York
+                        Pizza</li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/ChickenTikka.jpeg"
+                            width="26px" height="26px">California Pizza</li>
                 </ul>
-            </details>
-        </section>
-
-      <!-- section 2 -->
-      <section>
-        <details open>
-            <summary>Laptops</summary>
-            <ul type="none">
-                <li><a href="">Samsung</a></li>
-                <li><a href="">MI</a></li>
-                <li><a href="">Vivo</a></li>
-                <li><a href="iphone16.html" target="_blank">Iphone 16</a></li>
-            </ul>
-        </details>
-      </section>
-
-      <!-- section 3 -->
-       <details open>
-            <summary>Play Stations</summary>
-            <ul type="none">
-                <li><a href="">Samsung</a></li>
-                <li><a href="">MI</a></li>
-                <li><a href="">Vivo</a></li>
-                <li><a href="">Sony</a></li>
-            </ul>
-        </details>
-
-       <!-- section 3 -->
-       <section>
-        <details open>
-            <summary>Gadgets</summary>
-            <ul type="none">
-                <li><a href="">Samsung</a></li>
-                <li><a href="">MI</a></li>
-                <li><a href="">Vivo</a></li>
-                <li><a href="">Sony</a></li>
-            </ul>
-        </details>
-
-       </section>
-        <hr>
-    </main>
-
+            </section>
+            <hr>
+            <h3>Select Your Topping</h3>
+            <section style="padding-bottom: 10px;">
+                <div>
+                    <input id="topping1" type="checkbox">
+                    <label for="topping1">PEPPERONI</label>
+                </div>
+                <div>
+                    <input id="topping2" type="checkbox">
+                    <label for="topping2">SUPREME</label>
+                </div>
+                <div>
+                    <input id="topping3" type="checkbox">
+                    <label for="topping3">HAWAIIAN</label>
+                </div>
+                <div>
+                    <input id="topping4" type="checkbox">
+                    <label for="topping4">MEATLOVERS</label>
+                </div>
+                <div>
+                    <input id="topping5" type="checkbox">
+                    <label for="topping5">CHILLI</label>
+                </div>
+                <div>
+                    <input id="topping6" type="checkbox">
+                    <label for="topping6">KALE</label>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <h3>Select your Sides</h3>
+                <p style="padding-left: 10px; margin-top: -6px;">You may like them as well</p>
+                <ul>
+                    <li class="sidesList">Cold Coffee</li>
+                    <li class="sidesList">Ice Tea</li>
+                    <li class="sidesList">Blue Lagoon</li>
+                    <li class="sidesList">Strawberry Milkshake</li>
+                    <li class="sidesList">Goli Soda</li>
+                    <li class="sidesList">Arated Drinks</li>
+                </ul>
+            </section>
+        </div>
+        <!-- Right Pannel -->
+        <div class="mainContent">
+            <!-- display -->
+            <section class="pizzaTypes">
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/onionPizza.png" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Onion Pizza</li>
+                        <li>$ <del>300</del> 250</li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/CheesePizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Cheese Pizza</li>
+                        <li>$ <del>350</del> 300</li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/paneerPizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Paneer Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/chickenSausage.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Pizza</li>
+                        <li>$ <del>350</del> 300</li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/ChickenCheeze.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Cheese Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/ChickenTikka.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Cheese Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Order Details -->
+            <section class="orderContent">
+                <h2 style="text-align: center;">Your Order</h2>
+                <div class="orderList">
+                    <ol>
+                        <li class="order1">
+                            <label for="pizzaType"> Pizza Type:</label>
+                            <input type="text" id="pizzaType">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity">
+                            <label for="topping">Topping:</label>
+                            <input type="text" id="topping">
+                            <label for="sides">Sides:</label>
+                            <select id="sides" name="sides">
+                                <option value=""></option>
+                                <option value="coldCoffee">Cold Coffee</option>
+                                <option value="iceTea">Ice Tea</option>
+                                <option value="BlueLagoon">Blue Lagoon</option>
+                                <option value="StrawMilk">Strawberry Milkshake</option>
+                                <option value="goliSoda">Goli Soda</option>
+                                <option value="drinks">Arated Drinks</option>
+                            </select>
+                            <button style="font-size: large;"><img src="./deleteIcon.jpeg" width="11px"
+                                    height="11px"></button>
+                        </li>
+                        <li class="order2">
+                            <label for="pizzaType"> Pizza Type:</label>
+                            <input type="text" id="pizzaType">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity">
+                            <label for="topping">Topping:</label>
+                            <input type="text" id="topping">
+                            <label for="sides">Sides:</label>
+                            <select id="sides" name="sides">
+                                <option value=""></option>
+                                <option value="coldCoffee">Cold Coffee</option>
+                                <option value="iceTea">Ice Tea</option>
+                                <option value="BlueLagoon">Blue Lagoon</option>
+                                <option value="StrawMilk">Strawberry Milkshake</option>
+                                <option value="goliSoda">Goli Soda</option>
+                                <option value="drinks">Arated Drinks</option>
+                            </select>
+                            <button style="font-size: large;"><img src="./deleteIcon.jpeg" width="11px"
+                                    height="11px"></button>
+                        </li>
+                        <li class="order3">
+                            <label for="pizzaType"> Pizza Type:</label>
+                            <input type="text" id="pizzaType">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity">
+                            <label for="topping">Topping:</label>
+                            <input type="text" id="topping">
+                            <label for="sides">Sides:</label>
+                            <select id="sides" name="sides">
+                                <option value=""></option>
+                                <option value="coldCoffee">Cold Coffee</option>
+                                <option value="iceTea">Ice Tea</option>
+                                <option value="BlueLagoon">Blue Lagoon</option>
+                                <option value="StrawMilk">Strawberry Milkshake</option>
+                                <option value="goliSoda">Goli Soda</option>
+                                <option value="drinks">Arated Drinks</option>
+                            </select>
+                            <button style="font-size: large;"><img src="./deleteIcon.jpeg" width="11px"
+                                    height="11px"></button>
+                        </li>
+                        <li class="order4">
+                            <label for="pizzaType"> Pizza Type:</label>
+                            <input type="text" id="pizzaType">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity">
+                            <label for="topping">Topping:</label>
+                            <input type="text" id="topping">
+                            <label for="sides">Sides:</label>
+                            <select id="sides" name="sides">
+                                <option value=""></option>
+                                <option value="coldCoffee">Cold Coffee</option>
+                                <option value="iceTea">Ice Tea</option>
+                                <option value="BlueLagoon">Blue Lagoon</option>
+                                <option value="StrawMilk">Strawberry Milkshake</option>
+                                <option value="goliSoda">Goli Soda</option>
+                                <option value="drinks">Arated Drinks</option>
+                            </select>
+                            <button style="font-size: large;">+</button>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- Footer -->
     <footer>
-        <p style="text-align: center;">&copy E Products</p>
+        <ul class="ourLocations">
+            <li style="font-size: x-large;">We are at</li>
+            <li style="padding-left: 10px;">Hyderabad</li>
+            <li style="padding-left: 10px;">Chennai</li>
+            <li style="padding-left: 10px;">Andhra</li>
+            <li style="padding-left: 10px;">Banglore</li>
+        </ul>
+        <div>
+            <h5 style="text-align: end; padding: 5px;">pizza, dish of Italian origin consisting of a flattened disk of
+                bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other
+                cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired
+                oven heated to a very high temperature—and served hot
+            </h5>
+        </div>
+        <div>
+            <h5 style="text-align: end; padding: 5px;">“Pizza Bliss in Every Bite.” “Love at First Slice.” “Where Flavor
+                Meets Fun.” “Savor the Flavor
+                Explosion.”
+            </h5>
+        </div>
     </footer>
 </body>
 
