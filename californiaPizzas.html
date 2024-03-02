@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago Pizzas</title>
+    <style>
+        header {
+            background-color: rgb(229, 17, 197);
+            display: grid;
+            grid-template-columns: 50% 50%;
+            color: antiquewhite;
+            padding-left: 10px;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            padding: 30px;
+            text-align: end;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        nav a {
+            font-size: large;
+        }
+
+        .gridLay {
+            display: grid;
+            grid-template-columns: 20% 80%;
+        }
+
+        .columsLay {
+            padding: 10px;
+            background-image: url(./pizzaImages/pizzasBgImg.jpeg);
+            border-right: 1px solid black;
+            color: rgba(179, 123, 19, 0.845);
+        }
+        .columsLay a{
+            color: rgba(179, 123, 19, 0.845);
+        }
+
+        .pizzas {
+            font-size: large;
+            list-style-type: none;
+            padding-left: 4px;
+        }
+
+        .sidesList:hover {
+            font-size: x-large;
+            padding-left: 2px;
+        }
+
+        .pizzaList:hover {
+            font-size: x-large;
+            padding-left: 2px;
+        }
+
+        .welcomeContent,
+        .orderContent {
+            background-color: palegoldenrod;
+        }
+
+        .orderList {
+            padding: 10px;
+        }
+
+        .order1,
+        .order2,
+        .order3,
+        .order4 {
+            padding: 2px;
+            margin: 1px;
+        }
+
+        .pizzaTypes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-image: url(./pizzaImages/pizzasBgImg.jpeg);
+            height: 100%;
+        }
+
+        .typeCurr {
+            display: flex;
+            padding: 10px;
+            color: rgb(216, 115, 27);
+        }
+
+        .pizzaImg:hover {
+            width: 210px;
+            height: 210px;
+        }
+
+        footer {
+            background-color: rgb(229, 17, 197);
+            color: bisque;
+            display: grid;
+            grid-template-columns: 20% 30% 30% 20%;
+        }
+
+        .ourLocations {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page header -->
+    <header>
+        <h1>
+            Pizza with Sourav
+        </h1>
+        <nav>
+            <a class="navBar" href="./index.html">Home</a>
+            <a class="navBar" href="./services.html">Services</a>
+            <a class="navBar" href="./aboutUs.html">About Us</a>
+            <a class="navBar" href="#">Contact Us</a>
+        </nav>
+    </header>
+    <!-- Main Page -->
+    <section class="gridLay">
+        <!-- left pannel -->
+        <div class="columsLay">
+            <section>
+                <h3>Explore your Favourite</h3>
+                <ul class="pizzas">
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/ChickenCheeze.jpeg"
+                            width="26px" height="26px"><a href="#">Chicago Pizza</a></li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/GreekPizza.jpeg"
+                            width="26px" height="26px"><a href="./GreekPizzas.html">Greek Pizza</a></li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/DetroitPizza.jpeg"
+                            width="26px" height="26px"><a href="./DetroitPizzas.html">Detroit Pizza</a></li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/NewYorkPizza.jpeg"
+                            width="26px" height="26px"><a href="./newYorkPizzas.html">New York Pizza</a></li>
+                    <li class="pizzaList"><img style="border-radius: 50%;" src="./pizzaImages/ChickenTikka.jpeg"
+                            width="26px" height="26px"><a href="./californiaPizzas.html">California Pizza</a><img
+                            src="./pizzaImages/handPointing.png" width="26px" style="padding-left: 10px;"></li>
+                </ul>
+            </section>
+            <hr>
+            <h3>Select Your Topping</h3>
+            <section style="padding-bottom: 10px;">
+                <div>
+                    <input id="topping1" type="checkbox">
+                    <label for="topping1">PEPPERONI</label>
+                </div>
+                <div>
+                    <input id="topping2" type="checkbox">
+                    <label for="topping2">SUPREME</label>
+                </div>
+                <div>
+                    <input id="topping3" type="checkbox">
+                    <label for="topping3">HAWAIIAN</label>
+                </div>
+                <div>
+                    <input id="topping4" type="checkbox">
+                    <label for="topping4">MEATLOVERS</label>
+                </div>
+                <div>
+                    <input id="topping5" type="checkbox">
+                    <label for="topping5">CHILLI</label>
+                </div>
+                <div>
+                    <input id="topping6" type="checkbox">
+                    <label for="topping6">KALE</label>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <h3>Select your Sides</h3>
+                <p style="padding-left: 10px; margin-top: -6px;">You may like them as well</p>
+                <ul>
+                    <li class="sidesList">Cold Coffee</li>
+                    <li class="sidesList">Ice Tea</li>
+                    <li class="sidesList">Blue Lagoon</li>
+                    <li class="sidesList">Strawberry Milkshake</li>
+                    <li class="sidesList">Goli Soda</li>
+                    <li class="sidesList">Arated Drinks</li>
+                </ul>
+            </section>
+        </div>
+        <!-- Right Pannel -->
+        <div class="mainContent">
+            <!-- display -->
+            <section class="pizzaTypes">
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/deepDishPizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Deep Dish Pizza</li>
+                        <li>$ <del>300</del> 250</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/stuffedPizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Stuffed Pizza</li>
+                        <li>$ <del>350</del> 300</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/panPizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Pan Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/tevernPizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Tavern Pizza</li>
+                        <li>$ <del>350</del> 300</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/potPiePizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Pizza Pot Pie</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/chickenStuffedPizza.jpeg" alt="" width="200px"
+                        height="200px" style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Stuffed Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/chickenPanPizza.jpeg" alt="" width="200px" height="200px"
+                        style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Pan Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/chickenTavernPizza.jpeg" alt="" width="200px"
+                        height="200px" style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Tavern Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typeCurr">
+                    <img class="pizzaImg" src="./pizzaImages/chickenPotPiePIzza.jpeg" alt="" width="200px"
+                        height="200px" style="border-radius: 50%; object-fit: none;">
+                    <ul style="padding-top: 35px; padding-left: 10px; list-style-type: none;">
+                        <li>Chicken Pot Pie Pizza</li>
+                        <li>$ <del>400</del> 350</li>
+                        <li>
+                            <label for="currQuantity">Quantity:</label>
+                            <input type="number" id="currQuantity" name="currQuantity" min="1" style="width: 30px;">
+                        </li>
+                        <li>Availability</li>
+                        <li><select>
+                                <option></option>
+                                <option>Small</option>
+                                <option>Medium +$20</option>
+                                <option>Large +$40</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <ul class="ourLocations">
+            <li style="font-size: x-large; color: black">We are at</li>
+            <li style="padding-left: 10px;">Hyderabad</li>
+            <li style="padding-left: 10px;">Chennai</li>
+            <li style="padding-left: 10px;">Andhra</li>
+            <li style="padding-left: 10px;">Banglore</li>
+        </ul>
+        <div>
+            <h3 style="color: black">Opening Hours</h3>
+            <p>Monday to Friday - 11:00 am to 11:00pm</p>
+            <p>Saturday and sunday  - 11:00 am to 1:00am</p>
+        </div>
+        <div>
+            <h5 style="text-align: end; padding: 5px;">pizza, dish of Italian origin consisting of a
+                flattened disk of
+                bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other
+                cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired
+                oven heated to a very high temperature—and served hot
+            </h5>
+        </div>
+        <div>
+            <address style="text-align: end; padding: 15px;">
+                Owned by <a href="souravperikala.kumar456@gmail.com">Sourav Kumar</a>.<br>
+                Visit us at: Facebook<br>
+                facebook.com<br>
+                H.No 6 Pizza Land <br>
+                INDIA
+            </address>
+        </div>
+    </footer>
+</body>
+
+</html>
